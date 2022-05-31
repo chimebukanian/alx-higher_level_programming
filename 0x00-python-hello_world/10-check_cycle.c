@@ -8,8 +8,8 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *fast = *slow = list;
-       
+        listint_t *fast, *slow;
+	fast = slow = list;
 	if (!list)
 		return (0);
 
