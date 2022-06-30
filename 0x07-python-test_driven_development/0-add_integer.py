@@ -1,28 +1,22 @@
 #!/usr/bin/python3
 """
-This module defines `add_integer`
-The function returns the sum of a and b
+Module Name: 0-add_integer
+Holds function for Task 0: function adds 2 integers.
+Project: 0x07 Python Test Driven Development
 """
 
 
 def add_integer(a, b=98):
-    """adds a and b
-    Args:
-        a (int): term 1
-        b (int, optional): term 2. Defaults to 98.
-    Raises:
-        TypeError: a and b must be integer
-    Returns:
-        int: sum of a and b
+    """ Args: a: int or float b: int or float
+    Returns: (int) The sum of a and b
     """
+    if a is None or not (isinstance(a, (int, float))):
+        raise TypeError("a must be an integer")
+    else:
+        a = int(a)
+    if b is None or not (isinstance(b, (int, float))):
+        raise TypeError("b must be an integer")
+    else:
+        b = int(b)
 
-    values = []
-    for x, param in [(a, 'a'), (b, 'b')]:
-        if isinstance(x, int):
-            values.append(x)
-        elif isinstance(x, float):
-            values.append(int(x))
-        else:
-            raise TypeError("{} must be an integer".format(param))
-
-    return sum(values)
+    return a + b
