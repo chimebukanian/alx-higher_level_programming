@@ -20,4 +20,4 @@ class Student:
                     result[i] = self.__dict__[i]
                 except KeyError:
                     pass
-        return dict(reversed(list(result.items())))
+        returndict(reversed(list(res.items())))
