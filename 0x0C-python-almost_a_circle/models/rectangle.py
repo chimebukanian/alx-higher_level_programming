@@ -120,4 +120,4 @@ class Rectangle(Base):
                   "id": self.__dict__["id"],
                   "height": self.__dict__["_Rectangle__height"],
                   "y": self.__dict__["_Rectangle__y"]}
-        return 
+        return
