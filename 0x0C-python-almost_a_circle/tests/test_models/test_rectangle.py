@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Test Module for rectangle.py """
 import unittest
 Rectangle = __import__("models.rectangle").rectangle.Rectangle
