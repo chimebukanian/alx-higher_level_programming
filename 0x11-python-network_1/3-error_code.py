@@ -1,19 +1,17 @@
 #!/usr/bin/python3
+"""A script that:
+- takes in a URL,
+- sends a request to the URL
+- displays the body of the response (decoded in utf-8).
 """
-script that takes in a URL, sends a request to the URL
-and displays the value of the X-Request-Id
-variable found in the header of the response
-"""
 
 
-if __name__ == '__main__':
-    from urllib import request
-    from urllib.error import HTTPError
-    from sys import argv
+if __name__ == "__main__":
+    import sys
+    from urllib import request, error
 
-    url = f'argv[1]'
     try:
-        with request.urlopen(url) as response:
-            print(resp.read().decode('UTF-8'))
-    except HTTPError as e:
-        print("Error code:": e.code)
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)

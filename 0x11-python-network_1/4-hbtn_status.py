@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 """
-script that takes in a URL,
-sends a request to the URL
-and displays the body of the response.
+requests model
 """
-
 
 if __name__ == '__main__':
     import requests
-
-    r = requests.get('https://alx-intranet.hbtn.io/status')
-    data = r.data
+    html = requests.get('https://alx-intranet.hbtn.io/status')
     print("Body response:")
-    print(f'\t- type: {type(data)}')
-    print(f'\t- content: {data}')
+    print("\t- type: {}".format(html.text.__class__))
+    print("\t- content: {}".format(html.text))
